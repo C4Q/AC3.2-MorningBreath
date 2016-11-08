@@ -15,11 +15,8 @@ class ViewController: UIViewController {
 	var news = [News]()
 	var weather: Weather?
 	var images = [Image]()
-<<<<<<< HEAD
-	var user = "Kariiiiiiiiiiiin"
-=======
+	var user = "Karin"
     var quote: Quote?
->>>>>>> develop
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
