@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C8483101DD26AED00B78935 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C84830F1DD26AED00B78935 /* Quote.swift */; };
 		9E493D8C1DD12EF500D415CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E493D8B1DD12EF500D415CE /* AppDelegate.swift */; };
 		9E493D8E1DD12EF500D415CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E493D8D1DD12EF500D415CE /* ViewController.swift */; };
 		9E493D911DD12EF500D415CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E493D8F1DD12EF500D415CE /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C84830F1DD26AED00B78935 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		9E493D881DD12EF500D415CE /* MorningBreath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorningBreath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E493D8B1DD12EF500D415CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E493D8D1DD12EF500D415CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				9E493DA51DD133A600D415CE /* News.swift */,
 				9E6B72BA1DD1473A005EE52B /* Image.swift */,
 				9E6B72BC1DD1481B005EE52B /* Weather.swift */,
+				9C84830F1DD26AED00B78935 /* Quote.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				9E493DA61DD133A600D415CE /* News.swift in Sources */,
 				9E493D8C1DD12EF500D415CE /* AppDelegate.swift in Sources */,
 				9E6B72BD1DD1481B005EE52B /* Weather.swift in Sources */,
+				9C8483101DD26AED00B78935 /* Quote.swift in Sources */,
 				9E6B72BB1DD1473A005EE52B /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MorningBreath/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.viczhong.MorningBreath;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -321,6 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MorningBreath/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.viczhong.MorningBreath;
 				PRODUCT_NAME = "$(TARGET_NAME)";
