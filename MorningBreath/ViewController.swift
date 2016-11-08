@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 	var news = [News]()
 	var weather: Weather?
 	var images = [Image]()
-	var user = "Karin"
+	var user = "Kariiiiiiiiiiiin"
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -28,8 +28,8 @@ class ViewController: UIViewController {
 	let synthesizer = AVSpeechSynthesizer()
 	
 	@IBAction func voiceButtonTapped(_ sender: UIButton) {
-		//		guard let pk = pokemon else { return }
-		let myUtterance = AVSpeechUtterance(string: "Good morning. The weather today is too sunny, \(user). Hey, \(user). \(user), are you listening to me. \(user), be all that you can be, \(user). Here are today's headlines, \(user). In other news: \(news[1].title). Are you listening to em, \(user). \(news[1].description)")
+		guard let weather = weather else { return }
+		let myUtterance = AVSpeechUtterance(string: "Good morning, \(user). You can look forward to \(weather.description) with a high of \(weather.maxTemp) degrees and a low of \(weather.minTemp) today. In other news today: \(news[0].title). \(news[0].description)")
 		myUtterance.rate = 0.6
 		myUtterance.pitchMultiplier = 1.3
 		//		if isPaused {
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
 				if let images = Image.ArrOfImage(from: data!){
 					self.images = images
 					DispatchQueue.main.async {
-//						self.tableView.reloadData()
+						//						self.tableView.reloadData()
 					}
 				}
 			}
@@ -61,11 +61,11 @@ class ViewController: UIViewController {
 					print("we got weather info")
 					self.weather = weatherInfo
 					DispatchQueue.main.async {
-//						self.locationLabel.text = weatherInfo.location
-//						self.descriptionLabel.text = weatherInfo.description
-//						self.maxTempLabel.text = "Maximum Temp: \(weatherInfo.maxTemp)°"
-//						self.minTempLabel.text = "Minumum Temp:\(weatherInfo.minTemp)°"
-//						self.tempLabel.text = "Temp:\(weatherInfo.temperature)°"
+						//						self.locationLabel.text = weatherInfo.location
+						//						self.descriptionLabel.text = weatherInfo.description
+						//						self.maxTempLabel.text = "Maximum Temp: \(weatherInfo.maxTemp)°"
+						//						self.minTempLabel.text = "Minumum Temp:\(weatherInfo.minTemp)°"
+						//						self.tempLabel.text = "Temp:\(weatherInfo.temperature)°"
 					}
 				}
 			}
@@ -81,9 +81,9 @@ class ViewController: UIViewController {
 				let validNews = News.getNews(from: validData) {
 				self.news = validNews
 				dump(self.news)
-//				DispatchQueue.main.async {
-//					self.tableView?.reloadData()
-//				}
+				//				DispatchQueue.main.async {
+				//					self.tableView?.reloadData()
+				//				}
 			}
 		}
 	}
