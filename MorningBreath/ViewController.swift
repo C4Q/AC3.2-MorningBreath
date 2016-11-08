@@ -15,13 +15,18 @@ class ViewController: UIViewController {
 	var news = [News]()
 	var weather: Weather?
 	var images = [Image]()
+<<<<<<< HEAD
 	var user = "Kariiiiiiiiiiiin"
+=======
+    var quote: Quote?
+>>>>>>> develop
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		loadWeather()
 		loadNews()
 		loadImages()
+        loadQuote()
 	}
 	
 	// MARK: - Load Data code
@@ -87,5 +92,23 @@ class ViewController: UIViewController {
 			}
 		}
 	}
+    
+    
+    
+    func loadQuote() {
+        let QuoteEndpoint = "http://quotes.rest/qod.json?category=life"
+        APIRequestManager.manager.getData(endPoint: QuoteEndpoint) { (data:Data?) in
+            if data != nil {
+                if let quoteInfo = Quote.getDailyLifeQuote(from: data!) {
+                    print("we got quote info")
+                    self.quote = quoteInfo
+                    DispatchQueue.main.async {
+                        //self.quoteLabel.text = quoteInfo.quote
+                        //self.quoteAuthorLabel.text = quoteInfo.author
+                    }
+                }
+            }
+        }
+    }
 }
 
