@@ -8,12 +8,14 @@
 
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 	
 	var news = [News]()
 	var weather: Weather?
 	var images = [Image]()
+	var user = "Karin"
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -23,6 +25,18 @@ class ViewController: UIViewController {
 	}
 	
 	// MARK: - Load Data code
+	let synthesizer = AVSpeechSynthesizer()
+	
+	@IBAction func voiceButtonTapped(_ sender: UIButton) {
+		//		guard let pk = pokemon else { return }
+		let myUtterance = AVSpeechUtterance(string: "Good morning. The weather today is too sunny, \(user). Hey, \(user). \(user), are you listening to me. \(user), be all that you can be, \(user). Here are today's headlines, \(user). In other news: \(news[1].title). Are you listening to em, \(user). \(news[1].description)")
+		myUtterance.rate = 0.6
+		myUtterance.pitchMultiplier = 1.3
+		//		if isPaused {
+		
+		synthesizer.pauseSpeaking(at: .word)
+		synthesizer.speak(myUtterance)
+	}
 	
 	func loadImages() {
 		let endPoint = "http://www.splashbase.co/api/v1/images/latest"
