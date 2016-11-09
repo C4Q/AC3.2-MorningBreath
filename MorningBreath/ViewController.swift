@@ -18,16 +18,28 @@ class ViewController: UIViewController {
 	var weather: Weather?
 	var images = [Image]()
 	var user = "Karin"
-    var quote: Quote?
+	var quote: Quote?
+	
+	@IBOutlet weak var tempLabel: UILabel!
+	@IBOutlet weak var locationLabel: UILabel!
+	@IBOutlet weak var descLabel: UILabel!
+	@IBOutlet weak var maxLabel: UILabel!
+	@IBOutlet weak var minLabel: UILabel!
+	@IBOutlet weak var backgroundImage: UIImageView!
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		loadWeather()
 		loadNews()
 		loadImages()
+
         loadQuote()
         
     
+
+		loadQuote()
+
 	}
 
     
@@ -53,7 +65,16 @@ class ViewController: UIViewController {
 				if let images = Image.ArrOfImage(from: data!){
 					self.images = images
 					DispatchQueue.main.async {
-						//						self.tableView.reloadData()
+						APIRequestManager.manager.getData(endPoint: self.images[0].image) { (data: Data?) in
+							if  let validData = data,
+							let validImage = UIImage(data: validData) {
+								DispatchQueue.main.async {
+									self.backgroundImage.image = validImage
+									self.backgroundImage.alpha = 0.60
+									self.backgroundImage.setNeedsLayout()
+								}
+							}
+						}
 					}
 				}
 			}
@@ -68,11 +89,11 @@ class ViewController: UIViewController {
 					print("we got weather info")
 					self.weather = weatherInfo
 					DispatchQueue.main.async {
-						//						self.locationLabel.text = weatherInfo.location
-						//						self.descriptionLabel.text = weatherInfo.description
-						//						self.maxTempLabel.text = "Maximum Temp: \(weatherInfo.maxTemp)°"
-						//						self.minTempLabel.text = "Minumum Temp:\(weatherInfo.minTemp)°"
-						//						self.tempLabel.text = "Temp:\(weatherInfo.temperature)°"
+						self.locationLabel.text = weatherInfo.location
+						self.descLabel.text = weatherInfo.description.capitalized
+						self.maxLabel.text = "\(weatherInfo.maxTemp)°"
+						self.minLabel.text = "\(weatherInfo.minTemp)°"
+						self.tempLabel.text = "\(weatherInfo.temperature)°"
 					}
 				}
 			}
@@ -94,23 +115,23 @@ class ViewController: UIViewController {
 			}
 		}
 	}
-    
-    
-    
-    func loadQuote() {
-        let QuoteEndpoint = "http://quotes.rest/qod.json?category=life"
-        APIRequestManager.manager.getData(endPoint: QuoteEndpoint) { (data:Data?) in
-            if data != nil {
-                if let quoteInfo = Quote.getDailyLifeQuote(from: data!) {
-                    print("we got quote info")
-                    self.quote = quoteInfo
-                    DispatchQueue.main.async {
-                        //self.quoteLabel.text = quoteInfo.quote
-                        //self.quoteAuthorLabel.text = quoteInfo.author
-                    }
-                }
-            }
-        }
-    }
+	
+	
+	
+	func loadQuote() {
+		let QuoteEndpoint = "http://quotes.rest/qod.json?category=life"
+		APIRequestManager.manager.getData(endPoint: QuoteEndpoint) { (data:Data?) in
+			if data != nil {
+				if let quoteInfo = Quote.getDailyLifeQuote(from: data!) {
+					print("we got quote info")
+					self.quote = quoteInfo
+					DispatchQueue.main.async {
+						//self.quoteLabel.text = quoteInfo.quote
+						//self.quoteAuthorLabel.text = quoteInfo.author
+					}
+				}
+			}
+		}
+	}
 }
 
