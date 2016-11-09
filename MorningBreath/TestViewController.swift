@@ -18,13 +18,6 @@ class TestViewController: UIViewController, UIWebViewDelegate {
 		let url = NSURL (string: "http://service.mta.info/ServiceStatus/status.html?widget=yes")
 		let requestObj = NSURLRequest(url: url! as URL)
 		webViewTest.loadRequest(requestObj as URLRequest)
-		
-		
-		//		let htmlFile = Bundle.main.path(forResource: "mta.html", ofType: "html")
-		//		let html = try? String(contentsOfFile: htmlFile!, encoding: String.Encoding.utf8)
-		//		webViewTest.loadHTMLString(html!, baseURL: nil)
-		
-		// Do any additional setup after loading the view.
 	}
 	
 	override func didReceiveMemoryWarning() {
