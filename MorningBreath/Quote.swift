@@ -14,7 +14,7 @@ class Quote {
     
     init(quote:String, author:String) {
         self.quote = quote
-        self.author=author
+        self.author = author
     }
     
     static func getDailyLifeQuote (from data: Data) -> Quote? {
