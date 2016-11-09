@@ -22,6 +22,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTs-wh-YbL">
+                                <frame key="frameInset" minX="47" minY="124" width="289" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+=======
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_page2" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uAc-EU-RTp">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" red="0.50844333605448011" green="0.55504848800498907" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -80,6 +87,7 @@
                                 <rect key="frame" x="276" y="314" width="27" height="21"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+>>>>>>> 67469cf0a043ebfdc43a7e499b593fd02dc57430
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GfQ-x9-l4M">
@@ -161,6 +169,15 @@
                             <constraint firstItem="aHx-O2-NO7" firstAttribute="top" secondItem="AZ6-1L-LXG" secondAttribute="bottom" constant="20" id="xzI-9z-Ox3"/>
                         </constraints>
                     </view>
+<<<<<<< HEAD
+                    <connections>
+                        <outlet property="dateLabel" destination="FTs-wh-YbL" id="fUg-RI-6Nk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="62.518740629685162"/>
+=======
                     <tabBarItem key="tabBarItem" title="Today" image="Sunrise_Second" id="J49-3L-ZL6"/>
                     <connections>
                         <outlet property="backgroundImage" destination="uAc-EU-RTp" id="tL2-Nj-1U9"/>
@@ -238,6 +255,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CM6-pj-rhP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2954.4000000000001" y="129.98500749625188"/>
+>>>>>>> 67469cf0a043ebfdc43a7e499b593fd02dc57430
         </scene>
     </scenes>
     <resources>
