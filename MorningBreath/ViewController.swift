@@ -58,7 +58,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 			isPaused = false
 		}
 		else {
-			synthesizer.pauseSpeaking(at: .immediate)
+			synthesizer.stopSpeaking(at: .immediate)
 			isPaused = true
 		}
 	}
