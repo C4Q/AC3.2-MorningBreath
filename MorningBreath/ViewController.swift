@@ -11,6 +11,8 @@ import UIKit
 
 class ViewController: UIViewController {
 	
+    @IBOutlet weak var dateLabel: UILabel!
+    
 	var news = [News]()
 	var weather: Weather?
 	var images = [Image]()
@@ -22,8 +24,11 @@ class ViewController: UIViewController {
 		loadNews()
 		loadImages()
         loadQuote()
+        
+    
 	}
-	
+
+    
 	// MARK: - Load Data code
 	
 	func loadImages() {
