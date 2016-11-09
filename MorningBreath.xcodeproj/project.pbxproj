@@ -18,7 +18,6 @@
 		9E6B72BB1DD1473A005EE52B /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B72BA1DD1473A005EE52B /* Image.swift */; };
 		9E6B72BD1DD1481B005EE52B /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B72BC1DD1481B005EE52B /* Weather.swift */; };
 		9E7600C51DD298F9002FBD04 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7600C41DD298F9002FBD04 /* TestViewController.swift */; };
-		9E7600C71DD2A0A1002FBD04 /* mta.html in Resources */ = {isa = PBXBuildFile; fileRef = 9E7600C61DD2A0A1002FBD04 /* mta.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		9E6B72BA1DD1473A005EE52B /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		9E6B72BC1DD1481B005EE52B /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		9E7600C41DD298F9002FBD04 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		9E7600C61DD2A0A1002FBD04 /* mta.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mta.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +94,6 @@
 		9E493DA31DD12F5900D415CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9E7600C61DD2A0A1002FBD04 /* mta.html */,
 				9E493D8B1DD12EF500D415CE /* AppDelegate.swift */,
 				9E493D8F1DD12EF500D415CE /* Main.storyboard */,
 				9E493D921DD12EF500D415CE /* Assets.xcassets */,
@@ -177,7 +174,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E493D961DD12EF500D415CE /* LaunchScreen.storyboard in Resources */,
-				9E7600C71DD2A0A1002FBD04 /* mta.html in Resources */,
 				9E493D931DD12EF500D415CE /* Assets.xcassets in Resources */,
 				9E493D911DD12EF500D415CE /* Main.storyboard in Resources */,
 			);
