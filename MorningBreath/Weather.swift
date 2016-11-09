@@ -15,13 +15,15 @@ class Weather {
 	var minTemp: Int
 	var maxTemp: Int
 	var location: String
+	var id: Int
 	
-	init (description:String, temperature:Int, minTemp:Int, maxTemp:Int, location: String) {
+	init (description:String, temperature:Int, minTemp:Int, maxTemp:Int, location: String, id: Int) {
 		self.description = description
 		self.temperature = temperature
 		self.minTemp = temperature
 		self.maxTemp = maxTemp
 		self.location = location
+		self.id = id
 	}
 	
 	
@@ -37,8 +39,9 @@ class Weather {
 			guard let mintemp = mainInfoDict["temp_min"] as? Int  else {return nil}
 			guard let temp = mainInfoDict["temp"] as? Int else{return nil}
 			guard let currentlocation = dictionary["name"] as? String else {return nil}
+			guard let id = dictionary["id"] as? Int else {return nil}
 			
-			let w = Weather(description:weatherDescription, temperature:convertKelvin(toFahrenheit: true, kelvin: temp), minTemp:convertKelvin(toFahrenheit: true, kelvin: mintemp), maxTemp:convertKelvin(toFahrenheit: true, kelvin: maxtemp), location:currentlocation)
+			let w = Weather(description:weatherDescription, temperature:convertKelvin(toFahrenheit: true, kelvin: temp), minTemp:convertKelvin(toFahrenheit: true, kelvin: mintemp), maxTemp:convertKelvin(toFahrenheit: true, kelvin: maxtemp), location:currentlocation, id:id)
 			
 			return w
 			
