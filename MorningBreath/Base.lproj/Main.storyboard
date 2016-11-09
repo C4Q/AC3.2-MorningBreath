@@ -24,6 +24,10 @@
                                 <color key="tintColor" red="0.22312593711052475" green="1" blue="0.2502815167440271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EB6-1g-j1p">
+<<<<<<< HEAD
+                                <rect key="frame" x="31" y="30" width="313" height="368"/>
+=======
+>>>>>>> develop
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITG-8y-ts1">
@@ -51,8 +55,21 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+<<<<<<< HEAD
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minTemp" translatesAutoresizingMaskIntoConstraints="NO" id="U3a-gK-8UC">
+                                <rect key="frame" x="240" y="219" width="42" height="26"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="44" translatesAutoresizingMaskIntoConstraints="NO" id="Qhg-Se-rlK">
+                                <rect key="frame" x="51" y="55" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Gbf-DZ-3Ur"/>
+                                    <constraint firstAttribute="height" constant="50" id="KsM-oC-kRC"/>
+                                </constraints>
+                            </imageView>
+=======
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minTemp" translatesAutoresizingMaskIntoConstraints="NO" id="U3a-gK-8UC"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sunny" translatesAutoresizingMaskIntoConstraints="NO" id="Qhg-Se-rlK"/>
+>>>>>>> develop
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtp-D0-fWa">
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -68,6 +85,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GfQ-x9-l4M">
+<<<<<<< HEAD
+                                <rect key="frame" x="0.0" y="418" width="375" height="200"/>
+=======
+>>>>>>> develop
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="xhx-wP-j5k"/>
@@ -78,7 +99,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uKq-Lo-9IK" id="Z46-ct-4o2">
+<<<<<<< HEAD
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+=======
                                             <frame key="frameInset" width="375" height="43"/>
+>>>>>>> develop
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -96,6 +121,10 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Md-vT-Frw">
+<<<<<<< HEAD
+                                <rect key="frame" x="167" y="45" width="42" height="21"/>
+=======
+>>>>>>> develop
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -152,6 +181,7 @@
                         <outlet property="playButton" destination="DXZ-U0-TIH" id="4KR-up-uLt"/>
                         <outlet property="tempLabel" destination="ITG-8y-ts1" id="We3-Hv-Inq"/>
                         <outlet property="tintedView" destination="EB6-1g-j1p" id="saQ-zz-NbE"/>
+                        <outlet property="weatherIcon" destination="Qhg-Se-rlK" id="P1c-HP-7pp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -219,7 +249,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Sunny" width="50" height="50"/>
+        <image name="44" width="128" height="128"/>
         <image name="Sunrise_Second" width="38" height="22"/>
         <image name="background_page2" width="414" height="736"/>
         <image name="minTemp" width="42" height="26"/>
