@@ -9,8 +9,8 @@ An app that makes the start of your day much simpler.
 - MTA Advisories  
 
 ##Future Roadmap: 
-- implementing an alarm that activates app (doable? ) 
-- filter setting to users content (like facetergram) 
+- implementing an alarm that activates app (doable?) 
+- filter setting to users content (like facestergram) 
 
 #Lessons Learned
 
@@ -25,7 +25,7 @@ After some long contemplation, you finally have an idea and if you’re lucky yo
 For the Morning Breath team I was in charge of the weather API from the open weather map and the inspirational quote of the day. While the quote API was pretty straightforward to parse, the weather was a little more difficult due to the weather temperature returning in Kelvin. 
 
 
-I decided to write function like so 
+I decided to write function like so: 
 
 
 	```swift
