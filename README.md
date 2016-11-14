@@ -116,7 +116,7 @@ I think a few of us might’ve had our projects eaten by `git fetch`'ing a littl
 3. `git fetch` doesn’t seem to delete your contributions during conflicts. Make sure you don’t accidentally delete the wrong code around `HEAD` errors.
 
 
-4. In case you have decided to do a pull request despite merge warnings because ~~there doesn’t seem to be an alternative~~ ~~deleting commits are a bit too dangerous~~ one must always move forward, then following the 6 steps listed in the pull request tab should work.
+4. In case you have decided to do a pull request despite merge warnings because ~~there doesn’t seem to be an alternative and deleting commits are a bit too dangerous~~ one must always move forward, then following the 6 steps listed in the pull request tab should work.
   1. Unless it’s a storyboard. Then you’ve probably corrupted that file in your *develop* branch and now no one can open it. Good going.
   2. You could probably fix it if you copied and pasted your entire project folder elsewhere before `git commit`ing. You have, right? Just paste and replace that corrupted storyboard that everyone fetched with your backed up copy.
   3. You didn’t save one, did you?
@@ -145,7 +145,7 @@ What happens once you’ve gone through most of your features list for your proj
 ### AVSpeechSynthesizer
 
 
-At first, making Siri talk is super cool to you and every other table next to you. Nothing can rouse delight in a fellow student like making Siri say dirty words. Eventually though, it gets old, and you have to move on with some actual work. So when you’re putting foul language in your iDevice’s mouth, this is what you should know about *AVSpeechSynthesizer*:
+At first, making Siri talk is super cool to you and every other table next to you. Nothing can rouse delight in a fellow student like making Siri say dirty words. Eventually though, it gets old, and you have to move on with some actual work. So when you’re putting foul language in your iDevice’s mouth, this is what you should know about `AVSpeechSynthesizer`:
 
 
 * Siri is a dude if you speak her to British English with the `AVSpeechSynthesisVoice`. Don’t be surprised. 
