@@ -22,12 +22,9 @@ An app that makes the start of your day much, much simpler.
 
 After some long contemplation, you finally have an idea and if you’re lucky you found the API that’ll make your App possible. If you’re like me, you look at the JSON data, and you’re ready to dive in and start your parsing.  
 
-
 For the Morning Breath team I was in charge of the weather API from the open weather map and the inspirational quote of the day. While the quote API was pretty straightforward to parse, the weather was a little more difficult due to the weather temperature returning in Kelvin. 
 
-
 I decided to write a class function like so: 
-
 
 ```swift
 static func convertKelvin(toFahrenheit scale: Bool = true, kelvin: Int) -> Int {
@@ -47,7 +44,6 @@ the convertToKelvin function could have been avoided if I read the documentation
 
 I was curious as to how to make our Morning Breath App show a date format of Month, Day, Year. 
 
-
 I implemented the following method with in our view controller:
 
 ```swift 
@@ -65,9 +61,7 @@ The method makingDate has an instantiation of the DateFormatter class that has a
 
 Once Most of our app was completed, I noticed that our app was taking some time to load. I decided to delve into the launch screen. 
 
-
 At first I was going to do an animation while the data loaded in the background. As I went through a series of Stack Overflow posts and many other google searches I learned that you can’t really animate on the launch Screen itself with in the main story board. 
-
 
 What you can do is duplicate it (LaunchScreen) in storyboard and make it as entrance View controller of your app. Then when view gets loaded - start your animation. As a final result you will have "animating splash screen": App starts -> static launch screen -> transition to entrance view controller  which won't be visible by user because scenes look the same .  This Something I am still working on as Animation is something out of the scope of what I’ve learned so far.  For now are morning breath app has an image in the launch screen that as Thinley stated : “looks like a 20th century fox film poster”
 
@@ -89,7 +83,7 @@ On top of that, I learnt some of the simple yet elegant features such as **NSDat
 
 
 ### Unforeseen consequences + Mismanaged Expectations = Powder Keg
-I’ve had the luxury of ~~being forced into~~ working in collaborative efforts before, so I thought I’ve seen it all. Sometimes, it takes a keen managerial and technical eye to distill problems into lessons. Here are pitfalls I’ve encountered and ways I’ve dealt with them. 
+I’ve had the luxury of ~~being forced into~~ working in collaborative efforts before, so I thought I’ve seen it all. Sometimes, it takes a keen managerial and technical eye to distill problems into teachable moments, so here are pitfalls I’ve encountered and ways I’ve dealt with them. 
 
 
 1. When something goes wrong despite it working all other times before:
@@ -109,14 +103,14 @@ I’ve had the luxury of ~~being forced into~~ working in collaborative efforts 
 
 
 #### Git, you git
-I think a few of us might’ve had our projects eaten by `git fetch`ing a little too soon, but I didn’t think it’d be so testy to work with. After being burnt by the umpteenth `merge conflict`s, I have a few pro-tips for the inexperienced user that no one should never, ever follow.
+I think a few of us might’ve had our projects eaten by `git fetch`'ing a little too soon, but I didn’t think it’d be so testy to work with. After being burnt by the umpteenth `merge conflict`'s, I have a few pro-tips for the inexperienced user that no one should never, ever follow.
 
 
 1. `git fetch` is an angry god. Do not forget to pray every time you push to your branch, lest the next fetch fail due to `header` errors or storyboard merge fails.
 
 
 2. It’s best to work on and add one file at a time to minimize overlap and thus merge failures. 
-  * One can _reset_ accidental `git add .`s with `git reset`. Do it right or do it twice.
+  * One can _reset_ accidental `git add .`'s with `git reset`. Do it right or do it twice.
 
 
 3. `git fetch` doesn’t seem to delete your contributions during conflicts. Make sure you don’t accidentally delete the wrong code around `HEAD` errors.
