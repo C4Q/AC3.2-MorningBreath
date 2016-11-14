@@ -7,6 +7,7 @@ An app that makes the start of your day much simpler.
 - Top 10 news feed from Washington Post 
 - Motivational Quote 
 - MTA Advisories
+- New background daily
 - And Brit Siri reads that all aloud to you, BBC News style! 
 
 ##Future Roadmap: 
