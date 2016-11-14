@@ -28,44 +28,44 @@ For the Morning Breath team I was in charge of the weather API from the open wea
 I decided to write function like so: 
 
 
-	```swift
-	static func getWeather (from data: Data) -> Weather? {
-	do {
-	let jsonData: Any = try JSONSerialization.jsonObject(with: data, options: [])
-	guard let dictionary = jsonData as? [String:AnyObject] else {return nil}
-	guard let weatherArray = dictionary["weather"] as? [[String: AnyObject]] else{return nil}
-	guard let weatherDescription = weatherArray[0]["description"] as? String else {return nil}
-	guard let mainInfoDict = dictionary["main"] as? [String:AnyObject] else {return nil}
-	guard let maxtemp = mainInfoDict["temp_max"] as? Int else {return nil}
-	guard let mintemp = mainInfoDict["temp_min"] as? Int  else {return nil}
-	guard let temp = mainInfoDict["temp"] as? Int else{return nil}
-	guard let currentlocation = dictionary["name"] as? String else {return nil}
-	guard let id = dictionary["id"] as? Int else {return nil}
+```swift
+static func getWeather (from data: Data) -> Weather? {
 
-	let w = Weather(description:weatherDescription, temperature:convertKelvin(toFahrenheit: true, kelvin: temp), minTemp:convertKelvin(toFahrenheit: true, kelvin: mintemp), maxTemp:convertKelvin(toFahrenheit: true, kelvin: maxtemp), location:currentlocation, id:id)
+do {
+let jsonData: Any = try JSONSerialization.jsonObject(with: data, options: [])
+guard let dictionary = jsonData as? [String:AnyObject] else {return nil}
+guard let weatherArray = dictionary["weather"] as? [[String: AnyObject]] else{return nil}
+guard let weatherDescription = weatherArray[0]["description"] as? String else {return nil}
+guard let mainInfoDict = dictionary["main"] as? [String:AnyObject] else {return nil}
+guard let maxtemp = mainInfoDict["temp_max"] as? Int else {return nil}
+guard let mintemp = mainInfoDict["temp_min"] as? Int  else {return nil}
+guard let temp = mainInfoDict["temp"] as? Int else{return nil}
+guard let currentlocation = dictionary["name"] as? String else {return nil}
+guard let id = dictionary["id"] as? Int else {return nil}
 
-	return w
+let w = Weather(description:weatherDescription, temperature:convertKelvin(toFahrenheit: true, kelvin: temp), minTemp:convertKelvin(toFahrenheit: true, kelvin: mintemp), maxTemp:convertKelvin(toFahrenheit: true, kelvin: maxtemp), location:currentlocation, id:id)
 
-	}
+return w
 
-	catch {
-	print("ERRRROOOOORRR")
-	}
-	return nil
-	}
+}
+
+catch {
+print("ERRRROOOOORRR")
+}
+return nil
+}
 
 
-	static func convertKelvin(toFahrenheit scale: Bool = true, kelvin: Int) -> Int {
+static func convertKelvin(toFahrenheit scale: Bool = true, kelvin: Int) -> Int {
 
-	if scale {
-	return Int((Double(kelvin) - 273.15) * 9/5 + 32)
-	}
-	else {
-	return Int(Double(kelvin) - 273.15)
-	}
-	}
-	}
-	```
+if scale {
+return Int((Double(kelvin) - 273.15) * 9/5 + 32)
+}
+else {
+return Int(Double(kelvin) - 273.15)
+}
+}
+```
 
 the convertToKelvin function could have been avoided if I read the documentation more closely. The documentation states that when you put Fahrenheit as one of your keys  in the call your return will have temperature as a Fahrenheit.  Thus read documentation it can save you some time, work, and maybe some frustration. 
 
