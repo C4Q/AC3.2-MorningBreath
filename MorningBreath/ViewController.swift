@@ -51,7 +51,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 		guard let quote = quote else { return }
 		let myUtterance = AVSpeechUtterance(string: "Good morning. You can look forward to \(weather.description) with a high of \(weather.maxTemp) degrees and a low of \(weather.minTemp) today. \(quote.author) once said: \(quote.quote). Today's top headline: \(news[0].title). \(news[0].description)")
 		myUtterance.rate = 0.5
-		myUtterance.pitchMultiplier = 1.3
+		myUtterance.pitchMultiplier = 1.0
+        myUtterance.voice = AVSpeechSynthesisVoice.init(language: "en-GB")
 		
 		if isPaused {
 			synthesizer.speak(myUtterance)
