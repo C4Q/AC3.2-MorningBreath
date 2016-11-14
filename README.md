@@ -1,4 +1,4 @@
-# Project: Daily morning App
+# Project: Morning Breath, the Daily Morning App
 
 An app that makes the start of your day much simpler. 
 
@@ -6,18 +6,18 @@ An app that makes the start of your day much simpler.
 - Weather 
 - Top 10 news feed from Washington Post 
 - Motivational Quote 
-- MTA Advisories  
+- MTA Advisories
+- And Brit Siri reads that all aloud to you, BBC News style! 
 
 ##Future Roadmap: 
-- implementing an alarm that activates app (doable?) 
-- filter setting to users content (like facestergram) 
+- implementing an alarm that activates Siri 
+- filter setting to users content (like Facestergram) 
 
 #Lessons Learned
 
 ##Karen
 
 ###The Importance of API documentation! 
-
 
 After some long contemplation, you finally have an idea and if you’re lucky you found the API that’ll make your App possible. If you’re like me, you look at the JSON data, and you’re ready to dive in and start your parsing.  
 
