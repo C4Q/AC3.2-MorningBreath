@@ -103,7 +103,7 @@ I’ve had the luxury of ~~being forced into~~ working in collaborative efforts 
 
 
 #### Git, you git
-I think a few of us might’ve had our projects eaten by `git fetch`'ing a little too soon, but I didn’t think it’d be so testy to work with. After being burnt by the umpteenth `merge conflict`'s, I have a few pro-tips for the inexperienced user that no one should never, ever follow.
+I think a few of us might’ve had our projects eaten by `git pull`'ing a little too soon, but I didn’t think it’d be so testy to work with. After being burnt by the umpteenth `merge conflict`'s, I have a few pro-tips for the inexperienced user that no one should never, ever follow.
 
 
 1. `git fetch` is an angry god. Do not forget to pray every time you push to your branch, lest the next fetch fail due to `header` errors or storyboard merge fails.
