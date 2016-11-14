@@ -25,45 +25,18 @@ After some long contemplation, you finally have an idea and if you’re lucky yo
 For the Morning Breath team I was in charge of the weather API from the open weather map and the inspirational quote of the day. While the quote API was pretty straightforward to parse, the weather was a little more difficult due to the weather temperature returning in Kelvin. 
 
 
-I decided to write function like so: 
+I decided to write a class function like so: 
 
 
 ```swift
-static func getWeather (from data: Data) -> Weather? {
-
-do {
-let jsonData: Any = try JSONSerialization.jsonObject(with: data, options: [])
-guard let dictionary = jsonData as? [String:AnyObject] else {return nil}
-guard let weatherArray = dictionary["weather"] as? [[String: AnyObject]] else{return nil}
-guard let weatherDescription = weatherArray[0]["description"] as? String else {return nil}
-guard let mainInfoDict = dictionary["main"] as? [String:AnyObject] else {return nil}
-guard let maxtemp = mainInfoDict["temp_max"] as? Int else {return nil}
-guard let mintemp = mainInfoDict["temp_min"] as? Int  else {return nil}
-guard let temp = mainInfoDict["temp"] as? Int else{return nil}
-guard let currentlocation = dictionary["name"] as? String else {return nil}
-guard let id = dictionary["id"] as? Int else {return nil}
-
-let w = Weather(description:weatherDescription, temperature:convertKelvin(toFahrenheit: true, kelvin: temp), minTemp:convertKelvin(toFahrenheit: true, kelvin: mintemp), maxTemp:convertKelvin(toFahrenheit: true, kelvin: maxtemp), location:currentlocation, id:id)
-
-return w
-
-}
-
-catch {
-print("ERRRROOOOORRR")
-}
-return nil
-}
-
-
 static func convertKelvin(toFahrenheit scale: Bool = true, kelvin: Int) -> Int {
 
-if scale {
-return Int((Double(kelvin) - 273.15) * 9/5 + 32)
-}
-else {
-return Int(Double(kelvin) - 273.15)
-}
+	if scale {
+		return Int((Double(kelvin) - 273.15) * 9/5 + 32)
+	}
+	else {
+		return Int(Double(kelvin) - 273.15)
+	}
 }
 ```
 
@@ -75,26 +48,20 @@ the convertToKelvin function could have been avoided if I read the documentation
 I was curious as to how to make our Morning Breath App show a date format of Month, Day, Year. 
 
 
-I implanted the following method with in our view controller
+I implemented the following method with in our view controller:
 
-	```swift 
-	func makingDate(){
+```swift 
+func makingDate(){
 	let dateformatter = DateFormatter()
 	dateformatter.dateFormat = "MMMM dd, yyyy"
 
 	dateLabel.text = dateformatter.string(from: Date())
-	}
-	```
+}
+```
 
 The method makingDate has an instantiation of the DateFormatter class that has a property of DateFormat which  is an enumeration of different styles of Dates. A set the style of date I wanted and set the date label’s text to that string. 
 
-
-
-
 ### Launch Screen, App Icon, and Animation
-
-
-
 
 Once Most of our app was completed, I noticed that our app was taking some time to load. I decided to delve into the launch screen. 
 
@@ -105,22 +72,18 @@ At first I was going to do an animation while the data loaded in the background.
 What you can do is duplicate it (LaunchScreen) in storyboard and make it as entrance View controller of your app. Then when view gets loaded - start your animation. As a final result you will have "animating splash screen": App starts -> static launch screen -> transition to entrance view controller  which won't be visible by user because scenes look the same .  This Something I am still working on as Animation is something out of the scope of what I’ve learned so far.  For now are morning breath app has an image in the launch screen that as Thinley stated : “looks like a 20th century fox film poster”
 
 
-
-
-creating an app Icon was something I was interested in making too. So I created our image and shortly figured out that I needed to make an image for each type of simulator Icon size.  making an icon for each of the sizes seemed a lot of work so I found this website: https://makeappicon.com   that gives you a zip file for each of the app Icon sizes. 
+Creating an app Icon was something I was interested in making too. So I created our image and shortly figured out that I needed to make an image for each type of simulator Icon size.  making an icon for each of the sizes seemed a lot of work so I found this website: https://makeappicon.com   that gives you a zip file for each of the app Icon sizes. 
 
 
 ## Thinley
 
 
-###Using  Multiple APIs in One Project and Flow of Building World-class App 
+###Using Multiple APIs in One Project and the Flow of Building World-class App 
+
+The project taught me how to use all the bits and pieces of Swift that I have been learning in past three months. The product I see from this three days project gives me confidence that I can build even more sophisticated Apps in the future. One of the most important lessons I have learned from the project is to master the challenge of juggling multiple APIs. We displayed information from four different APIs and beautifully squeezed them into one screen. The project also help me in building a fairly complicated App while making it easy to use. We would have use multiple screens for each APIs but we chose to be efficient and user-friendly. 
 
 
-The project taught me how to use all the bits and pieces of Swift that I have been learning in past three months. The product I see from this three days project gives me confident that I can build even more sophisticated App in the future. One of the most important lesson I have learned from the project is that working on multiple APIs in one project. We have used four different APIs and beautifully squeezed in one screen. The project also help me in building fairly complicated App while making it easy to use. We would have use multiple screens for each APIs but we chose to be user friendly.  
-
-
-On top of that, I learnt some of the simple yet elegant features such as **NSDate object**, **Web-View**, **manipulating API’s parameter**, **segue to designated website** and **AVSpeechSynthesizer object** that reads text. 
-
+On top of that, I learnt some of the simple yet elegant features such as **NSDate Object**, **webView**, **manipulating API’s parameter**, **segue to designated website** and **AVSpeechSynthesizer Object** that reads text. 
 
 ## Vic
 
