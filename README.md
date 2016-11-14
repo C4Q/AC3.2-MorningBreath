@@ -1,6 +1,6 @@
 # Morning Breath, the Daily Morning App
 
-An app that makes the start of your day much simpler. 
+An app that makes the start of your day much, much simpler. 
 
 ##Features
 - Weather 
