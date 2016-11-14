@@ -109,7 +109,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 						self.minLabel.text = "\(weatherInfo.minTemp)°"
 						self.tempLabel.text = "\(weatherInfo.temperature)°"
 						print("\n\n\nWeather ID is \(weatherInfo.id)\n\n\n")
-						switch weatherInfo.id/10000 {
+						switch weatherInfo.id {
 						case 800: self.weatherIcon.image = UIImage(named: "36")
 						case 801...804: self.weatherIcon.image = UIImage(named: "30")
 						case 300...321: self.weatherIcon.image = UIImage(named: "02")

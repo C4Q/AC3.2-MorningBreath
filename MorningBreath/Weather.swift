@@ -39,7 +39,7 @@ class Weather {
 			guard let mintemp = mainInfoDict["temp_min"] as? Int  else {return nil}
 			guard let temp = mainInfoDict["temp"] as? Int else{return nil}
 			guard let currentlocation = dictionary["name"] as? String else {return nil}
-			guard let id = dictionary["id"] as? Int else {return nil}
+			guard let id = weatherArray[0]["id"] as? Int else {return nil}
 			
 			let w = Weather(description:weatherDescription, temperature:convertKelvin(toFahrenheit: true, kelvin: temp), minTemp:convertKelvin(toFahrenheit: true, kelvin: mintemp), maxTemp:convertKelvin(toFahrenheit: true, kelvin: maxtemp), location:currentlocation, id:id)
 			
