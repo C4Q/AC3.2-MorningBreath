@@ -1,4 +1,4 @@
-# Project: Morning Breath, the Daily Morning App
+# Morning Breath, the Daily Morning App
 
 An app that makes the start of your day much simpler. 
 
@@ -42,8 +42,7 @@ static func convertKelvin(toFahrenheit scale: Bool = true, kelvin: Int) -> Int {
 
 the convertToKelvin function could have been avoided if I read the documentation more closely. The documentation states that when you put Fahrenheit as one of your keys  in the call your return will have temperature as a Fahrenheit.  Thus read documentation it can save you some time, work, and maybe some frustration. 
 
-### DATE FORMATER 
-
+### DATE FORMATTER 
 
 I was curious as to how to make our Morning Breath App show a date format of Month, Day, Year. 
 
@@ -160,25 +159,25 @@ At first, making Siri talk is super cool to you and every other table next to yo
 * There is a difference between `speakSpeaking()` and `pauseSpeaking()`. Mainly, you can continue off with the latter, but you can’t just get her to `speak()` the same _utterance_ again. If you made Siri pause, you must tell her to `continueSpeaking()`.
 
 
-	```swift
-	if isStopped {
-		synthesizer.speak(myUtterance)
-		isPaused = false
-	} else {
-		synthesizer.stopSpeaking(at: .immediate)
-		isPaused = true
-	}
-	```
+```swift
+if isStopped {
+	synthesizer.speak(myUtterance)
+	isPaused = false
+} else {
+	synthesizer.stopSpeaking(at: .immediate)
+	isPaused = true
+}
+```
 The above will make Siri start over from the beginning if you make her `speak()` again.
 
 
-	```swift
-	if isPaused {
-		synthesizer.continueSpeaking(myUtterance)
-		isPaused = false
-	} else {
-		synthesizer.pauseSpeaking(at: .immediate)
-		isPaused = true
-	}
-	```
+```swift
+if isPaused {
+	synthesizer.continueSpeaking(myUtterance)
+	isPaused = false
+} else {
+	synthesizer.pauseSpeaking(at: .immediate)
+	isPaused = true
+}
+```
 This will continue where Siri left off whence you paused her.
